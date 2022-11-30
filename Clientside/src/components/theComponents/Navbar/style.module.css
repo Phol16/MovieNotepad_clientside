@@ -1,0 +1,15 @@
+.logoContainer {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: #1a2a38;
+  width: 100vw;
+  height: 60px;
+  z-index: 9999;
+}
+.movienotepad {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}

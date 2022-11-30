@@ -1,0 +1,20 @@
+.theAdminButton {
+  padding: 3px;
+  margin: 3px;
+}
+.textConfirm {
+  color: black;
+}
+.conCan {
+  margin: 0 2px;
+}
+.label {
+  color: black;
+}
+.button {
+  align-self: center;
+  width: fit-content;
+  padding: 5px 20px;
+  margin-top: 10px;
+  background-color: gray;
+}

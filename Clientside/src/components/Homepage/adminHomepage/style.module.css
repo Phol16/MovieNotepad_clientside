@@ -1,0 +1,19 @@
+.container {
+  background-image: url('../../PageBg/bgseats.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.contentContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}

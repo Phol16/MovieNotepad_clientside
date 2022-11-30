@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  width: fit-content;
+  margin: 10px;
+}
+.button {
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #33609686;
+}
+.container:hover {
+  transform: scale(1.07);
+}

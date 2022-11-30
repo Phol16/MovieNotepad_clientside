@@ -1,0 +1,8 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  width: 60%;
+  top: 70px;
+}

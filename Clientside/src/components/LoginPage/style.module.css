@@ -1,0 +1,47 @@
+.container {
+  background-image: url('../PageBg/bgseats.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.subContainer {
+  background: rgba(26, 42, 56, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 42, 56, 0.25);
+  padding: 60px 30px;
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 20px;
+  width: 20vw;
+}
+form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+label {
+  display: flex;
+  flex-flow: column wrap;
+}
+span {
+  display: flex;
+  align-items: center;
+}
+.invalidInput {
+  padding: 0px;
+  margin: 0;
+  color: rgb(255, 61, 61);
+}
+.submit {
+  width: fit-content;
+  align-self: flex-end;
+}
