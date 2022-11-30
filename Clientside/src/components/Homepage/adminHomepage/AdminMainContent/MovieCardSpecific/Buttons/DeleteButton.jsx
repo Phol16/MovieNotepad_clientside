@@ -26,7 +26,7 @@ const DeleteButton = ({ theTitle }) => {
   const handleClose = () => setOpen(false); // set the value to false/close
 
   const deleteIt = async () => {
-    const response = await fetch(`http://localhost:8000/adminUser/movies/${theTitle}`, {
+    const response = await fetch(`https://movienotepad-serverside.onrender.com/adminUser/movies/${theTitle}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

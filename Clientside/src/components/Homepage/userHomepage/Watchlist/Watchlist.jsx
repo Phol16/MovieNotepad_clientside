@@ -13,7 +13,7 @@ const Watchlist = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchData('http://localhost:8000/user/watchlist');
+    fetchData('https://movienotepad-serverside.onrender.com/user/watchlist');
   }, []);
 
   const fetchData = async (url) => {

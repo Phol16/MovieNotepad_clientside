@@ -26,7 +26,7 @@ const DeleteWL = ({ theTitle }) => {
   const handleClose = () => setOpen(false); // set the value to false/close
 
   const deleteIt = async () => {
-    await fetch(`http://localhost:8000/user/watchlist/${theTitle}`, {
+    await fetch(`https://movienotepad-serverside.onrender.com/user/watchlist/${theTitle}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

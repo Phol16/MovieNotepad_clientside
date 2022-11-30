@@ -22,7 +22,7 @@ const Login = () => {
 
   const submit = async (e) => {
     e.preventDefault();
-    const validUser = await fetch(`http://localhost:8000/adminUser?Email=${emailAccount}`).then((res) => res.json());
+    const validUser = await fetch(`https://movienotepad-serverside.onrender.com/adminUser?Email=${emailAccount}`).then((res) => res.json());
 
     //check if email and password matches or has a value
     if (!validUser.theAdminUser || validUser.theAdminUser.email !== emailAccount || validUser.theAdminUser.password !== passwordAccount) {

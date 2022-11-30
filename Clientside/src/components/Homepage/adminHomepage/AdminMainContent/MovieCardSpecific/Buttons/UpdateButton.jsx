@@ -35,7 +35,7 @@ const UpdateButton = ({ theTitle }) => {
   let posterURL = '';
 
   useEffect(() => {
-    fetchData(`http://localhost:8000/movies?search=${theTitle}`);
+    fetchData(`https://movienotepad-serverside.onrender.com/movies?search=${theTitle}`);
   }, [open]);
 
   const fetchData = async (url) => {
@@ -50,7 +50,7 @@ const UpdateButton = ({ theTitle }) => {
   const theMovie = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`http://localhost:8000/adminUser/movies/${theTitle}`, {
+    const response = await fetch(`https://movienotepad-serverside.onrender.com/adminUser/movies/${theTitle}`, {
       method: 'PATCH',
       mode: 'cors',
       headers: {

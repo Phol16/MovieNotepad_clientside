@@ -9,22 +9,22 @@ const AdminMainContent = () => {
 
   useEffect(() => {
     if (theGenre === 'comedy') {
-      fetchData(`http://localhost:8000/movies/${theGenre}`); //fetch data with comedy genre
+      fetchData(`https://movienotepad-serverside.onrender.com/movies/${theGenre}`); //fetch data with comedy genre
     }
     if (theGenre === 'animation') {
-      fetchData(`http://localhost:8000/movies/${theGenre}`); //fetch data with animation genre
+      fetchData(`https://movienotepad-serverside.onrender.com/movies/${theGenre}`); //fetch data with animation genre
     }
     if (theGenre === 'drama') {
-      fetchData(`http://localhost:8000/movies/${theGenre}`); //fetch data with drama genre
+      fetchData(`https://movienotepad-serverside.onrender.com/movies/${theGenre}`); //fetch data with drama genre
     }
     if (theGenre === 'family') {
-      fetchData(`http://localhost:8000/movies/${theGenre}`); //fetch data with family genre
+      fetchData(`https://movienotepad-serverside.onrender.com/movies/${theGenre}`); //fetch data with family genre
     }
     if (theGenre === 'horror') {
-      fetchData(`http://localhost:8000/movies/${theGenre}`); //fetch data with horror genre
+      fetchData(`https://movienotepad-serverside.onrender.com/movies/${theGenre}`); //fetch data with horror genre
     }
     if (theGenre === 'all') {
-      fetchData(`http://localhost:8000/movies`); //fetch all the data
+      fetchData(`https://movienotepad-serverside.onrender.com/movies`); //fetch all the data
     }
   }, [theGenre, theUpdate]);
 

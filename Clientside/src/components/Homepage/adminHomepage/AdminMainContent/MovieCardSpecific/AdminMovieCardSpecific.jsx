@@ -14,7 +14,7 @@ const AdminMovieCardSpecific = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchData(`http://localhost:8000/movies?search=${theCard}`);
+    fetchData(`https://movienotepad-serverside.onrender.com/movies?search=${theCard}`);
   }, []);
 
   const fetchData = async (url) => {

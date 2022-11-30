@@ -40,7 +40,7 @@ const AddMovie = () => {
     e.preventDefault(); // to prevent from refreshing the page after submitting
 
     // submitting data to the DB
-    await fetch('http://localhost:8000/adminUser/movies', {
+    await fetch('https://movienotepad-serverside.onrender.com/adminUser/movies', {
       method: 'POST',
       mode: 'cors',
       headers: {
