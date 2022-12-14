@@ -63,6 +63,16 @@ const Login = () => {
           <input className={style.submit} type="submit" value="Login" />
         </form>
       </div>
+      <section className={style.note}>
+      <p>Register not yet implemented</p>
+      <p>Available AdminAccount</p>
+      <li>adminUser@gmail.com</li>
+      <p>Available UserAccount</p>
+      <li>user@gmail.com</li>
+      <li>user1@gmail.com</li>
+      <p>password: qwerty</p>
+      <p>note: initial login will take time</p>
+      </section>
     </div>
   );
 };
