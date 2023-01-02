@@ -20,6 +20,7 @@
   border-radius: 20px;
   width: 20vw;
 }
+
 form {
   display: flex;
   flex-flow: column wrap;
@@ -57,4 +58,31 @@ span {
   height: 250px;
   width: 200px;
   background-color: wheat;
+}
+@media screen and (min-width: 0px){
+  .subContainer{
+    width: 100vw;
+    border-radius: 0px;
+  }
+  .note{
+    height: 200px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 500px){
+  .subContainer{
+    width: 50vw;
+  }
+  .note{
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1200px){
+  .subContainer {
+    border-radius: 20px;
+    width: 20vw;
+  }
+  .note{
+    height: 200px;
+  }
 }
