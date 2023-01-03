@@ -7,8 +7,6 @@ const UserSideBar_Right = () => {
   return (
     <div className={style.container}>
       <div className={style.fixedContainer}>
-        <label htmlFor="search">Search Movie Here:</label>
-        <input onChange={selected} type="text" id="search" name="search" placeholder="Search" />
       </div>
     </div>
   );
