@@ -43,6 +43,7 @@ span {
   color: rgb(255, 61, 61);
 }
 .submit {
+  background-color: transparent;
   width: fit-content;
   align-self: flex-end;
 }

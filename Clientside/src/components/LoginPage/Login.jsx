@@ -9,6 +9,7 @@ const Login = () => {
   const [emailAccount, setEmailAccount] = useState([]); //variable for the emailaccount value
   const [passwordAccount, setPasswordAccount] = useState([]); //variable for the password value
   const [inputValid, setInputValid] = useState(''); //variable for the invalidinput text
+  const [loading, setLoading] = useState('none'); //variable for the invalidinput text
 
   const { getUserId } = useMovieContext(); // variable to get the users Id
   const navigate = useNavigate();
@@ -31,12 +32,14 @@ const Login = () => {
 
     getUserId(validUser.theAdminUser._id); //set the value for the user Id
 
+    setLoading('inline-block')
     //condition statement to redirect depends on the role
     if (validUser.theAdminUser.role === 'admin_User') {
       return navigate('/adminHomepage'); // redirect to admin homepage
     }
     navigate('/userHomepage'); //redirect to user homepage
   };
+
 
   return (
     <div className={style.container}>
@@ -60,7 +63,7 @@ const Login = () => {
           <br />
           <span className={style.invalidInput}>{inputValid}</span>
           <br />
-          <input className={style.submit} type="submit" value="Login" />
+          <button className={style.submit} type='submit'><i class="fa fa-spinner fa-spin" style={{display: `${loading}`, marginRight: '10px'}}></i>Login </button>
         </form>
       </div>
       <section className={style.note}>
