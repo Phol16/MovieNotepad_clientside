@@ -25,14 +25,16 @@ const Login = () => {
     e.preventDefault();
     const validUser = await fetch(`https://movienotepad-serverside.onrender.com/adminUser?Email=${emailAccount}`).then((res) => res.json());
 
+    setLoading('inline-block')
     //check if email and password matches or has a value
     if (!validUser.theAdminUser || validUser.theAdminUser.email !== emailAccount || validUser.theAdminUser.password !== passwordAccount) {
+      setLoading('none');
       return setInputValid('Invalid Input'); // set the value for the invalid input text
     }
 
     getUserId(validUser.theAdminUser._id); //set the value for the user Id
 
-    setLoading('inline-block')
+
     //condition statement to redirect depends on the role
     if (validUser.theAdminUser.role === 'admin_User') {
       return navigate('/adminHomepage'); // redirect to admin homepage
