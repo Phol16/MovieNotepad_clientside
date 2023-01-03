@@ -25,7 +25,6 @@ const Login = () => {
     e.preventDefault();
     const validUser = await fetch(`https://movienotepad-serverside.onrender.com/adminUser?Email=${emailAccount}`).then((res) => res.json());
 
-    setLoading('inline-block')
     //check if email and password matches or has a value
     if (!validUser.theAdminUser || validUser.theAdminUser.email !== emailAccount || validUser.theAdminUser.password !== passwordAccount) {
       setLoading('none');
@@ -42,7 +41,9 @@ const Login = () => {
     navigate('/userHomepage'); //redirect to user homepage
   };
 
-
+const load = ()=>{
+  setLoading('inline-block')
+}
   return (
     <div className={style.container}>
       <NavBar />
@@ -65,7 +66,7 @@ const Login = () => {
           <br />
           <span className={style.invalidInput}>{inputValid}</span>
           <br />
-          <button className={style.submit} type='submit'><i class="fa fa-spinner fa-spin" style={{display: `${loading}`, marginRight: '10px'}}></i>Login </button>
+          <button className={style.submit} type='submit' onClick={load}><i class="fa fa-spinner fa-spin" style={{display: `${loading}`, marginRight: '10px'}}></i>Login </button>
         </form>
       </div>
       <section className={style.note}>
