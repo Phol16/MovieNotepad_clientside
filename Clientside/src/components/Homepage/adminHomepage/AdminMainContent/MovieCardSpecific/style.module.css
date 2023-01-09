@@ -1,5 +1,6 @@
 .container {
   background-image: url('../../../../PageBg/bgseats.jpg');
+  color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -12,6 +13,7 @@
 .content {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
   align-items: center;
 }
 .button {

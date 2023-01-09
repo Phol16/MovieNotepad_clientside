@@ -1,11 +1,65 @@
-import React from 'react';
-import { Animation, Diversity3, FilterNone, FlutterDash, Mood, TextSnippet, TheaterComedy } from '@mui/icons-material';
+import React, { useState } from 'react';
+import { AccountCircle, AccountCircleRounded, Animation, Diversity3, FilterNone, FlutterDash, Mood, TextSnippet, TheaterComedy } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useMovieContext } from '../../../../Context/Context';
 import style from './style.module.css';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
 
 const UserSideBar_Left = () => {
   const { getGenre } = useMovieContext(); //variable to get the genre
+  const [state, setState] = useState({
+    left: false,
+  });
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+  const list = (anchor) => (
+    <Box sx={{ width: 250, backgroundColor:'#1a2a38', height:'100vh' }} role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+      <div className={style.fixedContainerDrawer}>
+        <div className={style.sorterDrawer}>
+          Genre:
+          <button onClick={comedyGenre} className={style.button}>
+            <Mood /> Comedy.{' '}
+          </button>
+          <button onClick={animationGenre} className={style.button}>
+            <Animation /> Animation
+          </button>
+          <button onClick={dramaGenre} className={style.button}>
+            <TheaterComedy />
+            Drama
+          </button>
+          <button onClick={familyGenre} className={style.button}>
+            <Diversity3 /> Family
+          </button>
+          <button onClick={horrorGenre} className={style.button}>
+            <FlutterDash /> Horror
+          </button>
+          <button onClick={allGenre} className={style.button}>
+            <FilterNone /> None
+          </button>
+        </div>
+        <div className={style.user}>
+          <div className={style.topPart}>
+            User
+            <button onClick={logout} className={style.logout}>
+              Logout
+            </button>
+          </div>
+          <br />
+          <button onClick={watchlist} className={style.buttonWL}>
+            <TextSnippet /> WatchList
+          </button>
+        </div>
+      </div>
+    </Box>
+  );
+
   const navigate = useNavigate();
 
   const comedyGenre = () => {
@@ -73,6 +127,13 @@ const UserSideBar_Left = () => {
           </button>
         </div>
       </div>
+      <Button  onClick={toggleDrawer('left', true)} sx={{ position: 'fixed', bottom: 10, left: 10, zIndex: '999', backgroundColor: '#1a2a38', color: 'white',display:{md:'none', xs:'flex'} }} >
+        <AccountCircle sx={{ color: 'white' }} />
+        Profile
+      </Button>
+      <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
+        {list('left')}
+      </Drawer>
     </div>
   );
 };

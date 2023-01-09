@@ -11,6 +11,7 @@
 }
 .subContainer {
   background: rgba(26, 42, 56, 0.5);
+  color: white;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(26, 42, 56, 0.25);
@@ -44,6 +45,7 @@ span {
 }
 .submit {
   background-color: transparent;
+  color: white;
   width: fit-content;
   align-self: flex-end;
 }

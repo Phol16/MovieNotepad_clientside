@@ -1,5 +1,6 @@
 .container {
   background-image: url('../../../PageBg/bgseats.jpg');
+  color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

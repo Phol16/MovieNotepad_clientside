@@ -66,7 +66,7 @@ const load = ()=>{
           <br />
           <span className={style.invalidInput}>{inputValid}</span>
           <br />
-          <button className={style.submit} type='submit' onClick={load}><i class="fa fa-spinner fa-spin" style={{display: `${loading}`, marginRight: '10px'}}></i>Login </button>
+          <button className={style.submit} type='submit' onClick={load}><i className="fa fa-spinner fa-spin" style={{display: `${loading}`, marginRight: '10px'}}></i>Login </button>
         </form>
       </div>
       <section className={style.note}>
