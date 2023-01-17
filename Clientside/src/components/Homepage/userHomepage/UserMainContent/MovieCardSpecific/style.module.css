@@ -4,53 +4,38 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
 }
-.content {
+.contentContainer{
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 }
-.button {
-  position: relative;
-  background-color: #7e97b4;
-  padding: 5px;
-  margin: 10px;
+.content{
+  margin-top: 100px;
 }
-.box {
-  position: relative;
-  right: -100px;
-}
-.boxDetails {
+.box{
   display: flex;
   flex-flow: column wrap;
-  background: rgba(26, 42, 56, 0.8);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(26, 42, 56, 0.4);
+  background: rgba(26, 42, 56, 0.65);
   padding: 10px;
-  width: 200px;
   border-radius: 10px;
+  gap: 10px;
 }
-a {
-  align-self: flex-end;
-}
-h3 {
-  margin: 10px;
-}
-.theButtons {
+.theButtons{
   display: flex;
-  align-items: center;
-  margin-left: -15px;
+  justify-content: space-between;
+}
+.boxDetails{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
 .addWL {
   display: flex;
   align-items: center;
   padding: 5px 8px;
-  background-color: #7e97b4;
 }
