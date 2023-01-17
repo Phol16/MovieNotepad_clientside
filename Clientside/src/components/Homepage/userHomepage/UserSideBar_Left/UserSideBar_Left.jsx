@@ -127,8 +127,8 @@ const UserSideBar_Left = () => {
           </button>
         </div>
       </div>
-      <Button  onClick={toggleDrawer('left', true)} sx={{ position: 'fixed', bottom: 10, left: 10, zIndex: '999', backgroundColor: '#1a2a38', color: 'white',display:{md:'none', xs:'flex'} }} >
-        <AccountCircle sx={{ color: 'white' }} />
+      <Button  onClick={toggleDrawer('left', true)} sx={{ position: 'fixed', bottom: 10, left: 10, zIndex: '999', backgroundColor: 'white', color: '#1a2a38',display:{md:'none', xs:'flex'}, border:'1px solid', textShadow:'0.5px 0.5px 4px black' }} >
+        <AccountCircle sx={{ color: 'black' }} />
         Profile
       </Button>
       <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
