@@ -11,10 +11,9 @@ const theStyle = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
   bgcolor: 'white',
   border: '2px solid #000',
-  borderRadius: '20px',
+  borderRadius: '5px',
   boxShadow: 24,
   p: 4,
 };
