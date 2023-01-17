@@ -1,17 +1,21 @@
-.container {
+.background{
   background-image: url('../PageBg/bgseats.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.container {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  margin-top: 50px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
+  padding: 10px 0;
+  margin-top: 100px;
+  }
 .subContainer{
   background: rgba(26, 42, 56, 0.5);
   color: white;
@@ -41,6 +45,7 @@
 }
 .note{
   position: relative;
+  width: fit-content;
   color: white;
   background-color: rgb(26, 42, 56);
   padding: 35px 20px;

@@ -45,8 +45,9 @@ const Login = () => {
     setInputValid('');
   };
   return (
-    <div className={style.container}>
+    <div className={style.background}>
       <NavBar />
+    <div className={style.container}>
       <div className={style.subContainer}>
         MovieNotepad
         <form onSubmit={(e) => submit(e)}>
@@ -82,6 +83,7 @@ const Login = () => {
         <p>password: <span>qwerty</span></p>
         <p>note: initial login will take time</p>
       </section>
+    </div>
     </div>
   );
 };

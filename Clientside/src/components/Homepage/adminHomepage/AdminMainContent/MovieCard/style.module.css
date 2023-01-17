@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-flow: column wrap;
+  width: fit-content;
   margin: 10px;
 }
 .button {

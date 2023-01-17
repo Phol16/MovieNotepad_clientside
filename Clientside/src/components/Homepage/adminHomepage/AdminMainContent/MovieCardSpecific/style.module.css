@@ -4,13 +4,37 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
 }
-.content {
+.contentContainer{
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  margin-top: 100px;
+}
+.box{
+  display: flex;
+  flex-flow: column wrap;
+  background: rgba(26, 42, 56, 0.65);
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+.theButtons{
+  display: flex;
+  justify-content: space-between;
+}
+.boxDetails{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+/* .content {
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -51,4 +75,4 @@ h3 {
 }
 .adminButtons {
   display: flex;
-}
+} */
