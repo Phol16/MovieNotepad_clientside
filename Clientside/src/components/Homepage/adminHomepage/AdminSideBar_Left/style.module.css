@@ -24,8 +24,13 @@
 }
 .button {
   background-color: #7e97b4;
+  color: white;
   margin: 2px 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 135px;
 }
 .admin {
   background: rgba(26, 42, 56, 0.8);
@@ -43,6 +48,7 @@
 }
 .logout {
   background-color: #7e97b4;
+  color: white;
   padding: 2px 8px;
   border-radius: 5px;
 }

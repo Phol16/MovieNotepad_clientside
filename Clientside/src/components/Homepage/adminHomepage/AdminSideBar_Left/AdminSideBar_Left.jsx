@@ -21,7 +21,7 @@ const AdminSideBar_Left = () => {
     setState({ ...state, [anchor]: open });
   };
   const list = (anchor) => (
-    <Box sx={{ width: 250, backgroundColor:'#1a2a38', height:'100vh' }} role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+    <Box sx={{ width: 250, backgroundColor:'#1a2a38', height:'100vh' }} role='presentation' >
       <div className={style.fixedContainerDrawer}>
         <div className={style.sorterDrawer}>
           Genre:
@@ -120,8 +120,8 @@ const AdminSideBar_Left = () => {
           <AddMovie />
         </div>
       </div>
-      <Button  onClick={toggleDrawer('left', true)} sx={{ position: 'fixed', bottom: 10, left: 10, zIndex: '999', backgroundColor: '#1a2a38', color: 'white',display:{md:'none', xs:'flex'} }} >
-        <AccountCircle sx={{ color: 'white' }} />
+      <Button  onClick={toggleDrawer('left', true)} sx={{ position: 'fixed', bottom: 10, left: 10, zIndex: '999', backgroundColor: 'white', color: '#1a2a38',display:{md:'none', xs:'flex'}, border:'1px solid', textShadow:'0.5px 0.5px 4px black' }} >
+        <AccountCircle sx={{ color: '#1a2a38' }} />
         Profile
       </Button>
       <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
