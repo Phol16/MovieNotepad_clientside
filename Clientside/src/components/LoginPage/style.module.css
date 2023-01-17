@@ -9,6 +9,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  margin-top: 50px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 .subContainer{
@@ -23,7 +24,7 @@
   flex-flow: column wrap;
   width: 100vw;
   gap: 25px;
-  padding: 20px 0;
+  padding: 40px 0;
   font-weight: 800;
 }
 .subContainer form{
@@ -42,10 +43,20 @@
   position: relative;
   color: white;
   background-color: rgb(26, 42, 56);
-  padding: 10px;
+  padding: 35px 20px;
   font-size: small;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+.note p{
+  margin-bottom: 5px;
+}
+.note li{
+  color: aqua;
+  margin-bottom: 5px;
+}
+.note span{
+  color: aqua;
 }
 .invalidInput{
   align-self: center;

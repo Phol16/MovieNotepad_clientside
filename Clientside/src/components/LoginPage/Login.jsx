@@ -75,10 +75,11 @@ const Login = () => {
         <p>Register not yet implemented</p>
         <p>Available AdminAccount</p>
         <li>adminUser@gmail.com</li>
+        <p>password: <span>qwerty</span></p>
         <p>Available UserAccount</p>
         <li>user@gmail.com</li>
         <li>user1@gmail.com</li>
-        <p>password: qwerty</p>
+        <p>password: <span>qwerty</span></p>
         <p>note: initial login will take time</p>
       </section>
     </div>
