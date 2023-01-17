@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../../theComponents/Navbar/NavBar';
+import NavBar from '../../Navbar/NavBar';
 import AdminMainContent from './AdminMainContent/AdminMainContent';
 import AdminSideBar_Left from './AdminSideBar_Left/AdminSideBar_Left';
 import AdminSideBar_Right from './AdminSideBar_Right/AdminSideBar_Right';

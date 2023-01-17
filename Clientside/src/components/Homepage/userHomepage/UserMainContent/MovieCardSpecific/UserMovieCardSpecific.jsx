@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useMovieContext } from '../../../../../Context/Context';
 import { useNavigate } from 'react-router-dom';
 import UserMovieCard from '../MovieCard/UserMovieCard';
-import NavBar from '../../../../theComponents/Navbar/NavBar';
+import NavBar from '../../../../Navbar/NavBar';
 import style from './style.module.css';
 import { Add } from '@mui/icons-material';
 

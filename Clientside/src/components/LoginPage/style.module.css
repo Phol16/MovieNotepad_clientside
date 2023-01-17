@@ -4,89 +4,56 @@
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-.subContainer {
+.subContainer{
   background: rgba(26, 42, 56, 0.5);
   color: white;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(26, 42, 56, 0.25);
-  padding: 60px 30px;
   display: flex;
-  flex-flow: column wrap;
-  border-radius: 20px;
-  width: 20vw;
-}
-
-form {
-  display: flex;
-  flex-flow: column wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  margin-top: 50px;
+  flex-flow: column wrap;
+  width: 100vw;
+  gap: 25px;
+  padding: 20px 0;
+  font-weight: 800;
 }
-
-label {
+.subContainer form{
   display: flex;
   flex-flow: column wrap;
 }
-span {
+.subContainer span{
   display: flex;
   align-items: center;
 }
-.invalidInput {
-  padding: 0px;
-  margin: 0;
-  color: rgb(255, 61, 61);
-}
-.submit {
-  background-color: transparent;
-  color: white;
+.submit{
   width: fit-content;
   align-self: flex-end;
 }
 .note{
-  position: absolute;
-  display: flex;
-  flex-flow: column;
-  color: black;
-  padding: 5px;
+  position: relative;
+  color: white;
+  background-color: rgb(26, 42, 56);
+  padding: 10px;
   font-size: small;
-  bottom: 10px;
-  left: 10px;
-  height: 250px;
-  width: 200px;
-  background-color: wheat;
+  border-radius: 10px;
+  margin-top: 20px;
 }
-@media screen and (min-width: 0px){
+.invalidInput{
+  align-self: center;
+  color: red;
+}
+@media screen and (min-width: 350px){
   .subContainer{
-    width: 100vw;
-    border-radius: 0px;
-  }
-  .note{
-display: none;
-  }
-}
-@media screen and (min-width: 500px){
-  .subContainer{
-    width: 50vw;
-  }
-  .note{
-    height: 200px;
-    font-size: 10px;
-    display: block;
-  }
-}
-@media screen and (min-width: 1200px){
-  .subContainer {
-    border-radius: 20px;
-    width: 20vw;
-  }
-  .note{
-    height: 200px;
+    max-width: 350px;
+    border-radius: 10px;
   }
 }

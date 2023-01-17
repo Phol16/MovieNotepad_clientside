@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMovieContext } from '../../../../Context/Context';
-import NavBar from '../../../theComponents/Navbar/NavBar';
+import NavBar from '../../../Navbar/NavBar';
 import WatchlistCard from './WatchlistCard/WatchlistCard';
 import style from './style.module.css';
 

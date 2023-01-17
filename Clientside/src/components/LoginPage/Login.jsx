@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Email, Lock } from '@mui/icons-material';
 import { useMovieContext } from '../../Context/Context';
-import NavBar from '../theComponents/Navbar/NavBar';
+import NavBar from '../Navbar/NavBar';
 import style from './style.module.css';
 
 const Login = () => {
@@ -33,7 +33,6 @@ const Login = () => {
 
     getUserId(validUser.theAdminUser._id); //set the value for the user Id
 
-
     //condition statement to redirect depends on the role
     if (validUser.theAdminUser.role === 'admin_User') {
       return navigate('/adminHomepage'); // redirect to admin homepage
@@ -41,43 +40,46 @@ const Login = () => {
     navigate('/userHomepage'); //redirect to user homepage
   };
 
-const load = ()=>{
-  setLoading('inline-block')
-}
+  const load = () => {
+    setLoading('inline-block');
+    setInputValid('');
+  };
   return (
     <div className={style.container}>
       <NavBar />
       <div className={style.subContainer}>
-        LOGIN
+        MovieNotepad
         <form onSubmit={(e) => submit(e)}>
-          <label htmlFor="Email">
+          <label htmlFor='Email' className={style.label}>
             <span>
               <Email /> Email:
             </span>
-            <input onChange={theEmail} type="text" id="Email" name="Email" required placeholder="Email" />
+            <input onChange={theEmail} type='text' id='Email' name='Email' required placeholder='Email' />
           </label>
           <br />
-          <label htmlFor="Password">
+          <label htmlFor='Password'>
             <span>
               <Lock /> Password:
             </span>
-            <input onChange={thePassword} type="password" id="Password" name="Password" required placeholder="password" />
+            <input onChange={thePassword} type='password' id='Password' name='Password' required placeholder='password' />
           </label>
           <br />
           <span className={style.invalidInput}>{inputValid}</span>
           <br />
-          <button className={style.submit} type='submit' onClick={load}><i className="fa fa-spinner fa-spin" style={{display: `${loading}`, marginRight: '10px'}}></i>Login </button>
+          <button className={style.submit} type='submit' onClick={load}>
+            <i className='fa fa-spinner fa-spin' style={{ display: `${loading}`, marginRight: '10px' }}></i>Login{' '}
+          </button>
         </form>
       </div>
       <section className={style.note}>
-      <p>Register not yet implemented</p>
-      <p>Available AdminAccount</p>
-      <li>adminUser@gmail.com</li>
-      <p>Available UserAccount</p>
-      <li>user@gmail.com</li>
-      <li>user1@gmail.com</li>
-      <p>password: qwerty</p>
-      <p>note: initial login will take time</p>
+        <p>Register not yet implemented</p>
+        <p>Available AdminAccount</p>
+        <li>adminUser@gmail.com</li>
+        <p>Available UserAccount</p>
+        <li>user@gmail.com</li>
+        <li>user1@gmail.com</li>
+        <p>password: qwerty</p>
+        <p>note: initial login will take time</p>
       </section>
     </div>
   );

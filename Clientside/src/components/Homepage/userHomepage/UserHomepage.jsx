@@ -3,7 +3,7 @@ import UserMainContent from './UserMainContent/UserMainContent';
 import UserSideBar_Left from './UserSideBar_Left/UserSideBar_Left';
 import UserSideBar_Right from './UserSideBar_Right/UserSideBar_Right';
 import style from './style.module.css';
-import NavBar from '../../theComponents/Navbar/NavBar';
+import NavBar from '../../Navbar/NavBar';
 
 const UserHomepage = () => {
   return (
