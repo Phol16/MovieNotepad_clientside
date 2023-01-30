@@ -1,0 +1,68 @@
+.background{
+  background-image: url('../PageBg/bgseats.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  font-family: sans-serif
+}
+.signUpContainer{
+  background: rgba(26, 42, 56, 0.5);
+  color: white;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 42, 56, 0.25);
+  border-radius: 5px;
+  padding: 25px 15px;
+  width: 300px;
+  margin: 100px auto;
+}
+.title{
+  margin-bottom: 20px;
+}
+.signUpForm{
+  display: flex;
+  flex-flow: column wrap;
+  gap: 5px;
+}
+.signUpInput{
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  font-size: larger;
+}
+.instruction{
+  display: block;
+  font-size: x-small;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.offscreen{
+  display: none;
+}
+.valid{
+  display: inline;
+}
+.invalid{
+  display: inline
+}
+.hide{
+  display: none;
+}
+.registered{
+  margin-top: 10px;
+}
+.loginButton{
+  background-color: transparent;
+  border: none;
+  color: aqua;
+  padding: 2px;
+  border-radius: 5px;
+}
+.loginButton:hover{
+  scale: 1.1;
+}

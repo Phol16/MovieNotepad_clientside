@@ -39,6 +39,9 @@ const Login = () => {
     }
     navigate('/userHomepage'); //redirect to user homepage
   };
+  const toSignUp=()=>{
+    navigate('/signUp')
+  }
 
   const load = () => {
     setLoading('inline-block');
@@ -67,9 +70,12 @@ const Login = () => {
           <br />
           <span className={style.invalidInput}>{inputValid}</span>
           <br />
+          <section className={style.actionButtons}>
+          <button className={style.signUp} onClick={toSignUp}>Sign Up</button>
           <button className={style.submit} type='submit' onClick={load}>
             <i className='fa fa-spinner fa-spin' style={{ display: `${loading}`, marginRight: '10px' }}></i>Login{' '}
           </button>
+          </section>
         </form>
       </div>
       <section className={style.note}>
