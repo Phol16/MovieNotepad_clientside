@@ -34,15 +34,11 @@ const SignUp = () => {
 
   useEffect(() => {
     const result = user_regex.test(user);
-    console.log(result);
-    console.log(user);
     setValidName(result);
   }, [user]);
 
   useEffect(() => {
     const result = password_regex.test(password);
-    console.log(result);
-    console.log(user);
     setValidPassword(result);
     const match = password === matchPassword;
     setValidMatch(match);
@@ -54,10 +50,9 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccess(true);
-    console.log(radioValue, user, password)
+
     if(radioValue === 'admin'){
-      return await fetch('https://movienotepad-serverside.onrender.com/adminUser', {
+       await fetch('https://movienotepad-serverside.onrender.com/adminUser', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -68,6 +63,7 @@ const SignUp = () => {
           password,
         }),
       });
+      return setSuccess(true);
     }
     await fetch('https://movienotepad-serverside.onrender.com/user', {
         method: 'POST',
@@ -80,6 +76,7 @@ const SignUp = () => {
           password,
         }),
       });
+      setSuccess(true)
   };
   const toLogin = () => {
     navigate('/');
@@ -94,7 +91,6 @@ const SignUp = () => {
       <NavBar />
       {success ? (
         <section className={style.signUpContainer}>
-          <p style={{ color: 'white', fontSize: ' 30px', marginBottom: '25px' }}>Still In Progress</p>
           <h1>Success</h1>
           <p>
             <button className={style.loginButton} onClick={toLogin}>
@@ -104,7 +100,6 @@ const SignUp = () => {
         </section>
       ) : (
         <section className={style.signUpContainer}>
-          <p style={{ color: 'white', fontSize: ' 30px', marginBottom: '25px' }}>Still In Progress</p>
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'}>
             {errMsg}
           </p>

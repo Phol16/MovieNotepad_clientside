@@ -71,7 +71,7 @@ const Login = () => {
           <span className={style.invalidInput}>{inputValid}</span>
           <br />
           <section className={style.actionButtons}>
-          <button className={style.signUp} onClick={toSignUp}>Sign Up</button>
+          <button className={style.signUp} type='button' onClick={toSignUp}>Sign Up</button>
           <button className={style.submit} type='submit' onClick={load}>
             <i className='fa fa-spinner fa-spin' style={{ display: `${loading}`, marginRight: '10px' }} ></i>Login{' '}
           </button>
@@ -79,7 +79,8 @@ const Login = () => {
         </form>
       </div>
       <section className={style.note}>
-        <p>Register not yet implemented</p>
+       <h3>Note: <span>Initial request from server will take time</span><br/></h3>
+       <p>(because of free host service)</p><br/>
         <p>Available AdminAccount</p>
         <li>adminUser@gmail.com</li>
         <p>password: <span>qwerty</span></p>
@@ -87,7 +88,7 @@ const Login = () => {
         <li>user@gmail.com</li>
         <li>user1@gmail.com</li>
         <p>password: <span>qwerty</span></p>
-        <p>note: initial login will take time</p>
+
       </section>
     </div>
     </div>
