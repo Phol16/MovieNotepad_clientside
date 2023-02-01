@@ -73,7 +73,7 @@ const Login = () => {
           <section className={style.actionButtons}>
           <button className={style.signUp} onClick={toSignUp}>Sign Up</button>
           <button className={style.submit} type='submit' onClick={load}>
-            <i className='fa fa-spinner fa-spin' style={{ display: `${loading}`, marginRight: '10px' }}></i>Login{' '}
+            <i className='fa fa-spinner fa-spin' style={{ display: `${loading}`, marginRight: '10px' }} ></i>Login{' '}
           </button>
           </section>
         </form>

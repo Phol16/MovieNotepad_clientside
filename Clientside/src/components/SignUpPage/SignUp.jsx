@@ -6,14 +6,16 @@ import { useNavigate } from 'react-router-dom';
 import style from './style.module.css';
 import NavBar from '../Navbar/NavBar';
 
-const user_regex = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
+const user_regex = /^[a-zA-Z][a-zA-Z0-9-_](?=.*[@]).{3,23}$/;
 const password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%.]).{8,24}$/;
 const REGISTER_URL = '/register';
 
 const SignUp = () => {
-  const userRef = useRef();
+  const userRef = useRef(null);
   const errRef = useRef();
   const navigate = useNavigate();
+
+  const [radioValue, setRadioValue] = useState('user')
 
   const [user, setUser] = useState('');
   const [validName, setValidName] = useState(false);
@@ -29,10 +31,6 @@ const SignUp = () => {
 
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
-
-  useEffect(() => {
-    userRef.current.focus();
-  }, []);
 
   useEffect(() => {
     const result = user_regex.test(user);
@@ -57,10 +55,39 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSuccess(true);
+    console.log(radioValue, user, password)
+    if(radioValue === 'admin'){
+      return await fetch('https://movienotepad-serverside.onrender.com/adminUser', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: user,
+          password,
+        }),
+      });
+    }
+    await fetch('https://movienotepad-serverside.onrender.com/user', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: user,
+          password,
+        }),
+      });
   };
   const toLogin = () => {
     navigate('/');
   };
+  const radioFunction = (e)=>{
+    setRadioValue(e.target.value)
+  }
+  console.log(radioValue)
 
   return (
     <section className={style.background}>
@@ -84,7 +111,7 @@ const SignUp = () => {
           <h1 className={style.title}>Register</h1>
           <form className={style.signUpForm} onSubmit={handleSubmit}>
             <label htmlFor='username' className={style.signUpLabel}>
-              Username:
+              Email:
               <span className={validName ? style.valid : style.hide}>
                 <FontAwesomeIcon icon={faCheck} style={{ color: 'green' }} />
               </span>
@@ -115,7 +142,8 @@ const SignUp = () => {
               <FontAwesomeIcon icon={faInfoCircle} style={{ marginRight: '2px' }} />
               4 to 24 characters. <br />
               Must begin with a letter. <br />
-              Letters, numbers, underscores, hypens allowed.
+              Letters, numbers, underscores, hypens allowed.<br/>
+              must have @ symbol.
             </p>
             <label htmlFor='password' className={style.signUpLabel}>
               Password:
@@ -179,7 +207,17 @@ const SignUp = () => {
               <FontAwesomeIcon icon={faInfoCircle} style={{ marginRight: '2px' }} />
               Must be the same with password
             </p>
-            <button disabled={!validName || !validPassword || !validMatch ? true : false} className={style.signUpButton}> Sign Up</button>
+            <section className={style.radioButton}>
+              <h5>Select Role:</h5>
+              <label htmlFor='admin'>Admin</label>
+              <input type='radio' value='admin' className={style.radioButtonInput} checked={radioValue === 'admin'} onChange={radioFunction}/>
+              <label htmlFor='user'>User</label>
+              <input type='radio' value='user' className={style.radioButtonInput} checked={radioValue === 'user'} onChange={radioFunction}/>
+            </section>
+            <button disabled={!validName || !validPassword || !validMatch ? true : false} className={style.signUpButton}>
+              {' '}
+              Sign Up
+            </button>
           </form>
           <section className={style.registered}>
             <p>Already registered?</p>

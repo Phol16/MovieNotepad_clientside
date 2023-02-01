@@ -73,6 +73,16 @@
   padding: 2px;
   border-radius: 5px;
 }
+.radioButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.radioButtonInput{
+  width: 20px;
+}
 .loginButton:hover{
   scale: 1.1;
 }
