@@ -179,7 +179,7 @@ const SignUp = () => {
               <FontAwesomeIcon icon={faInfoCircle} style={{ marginRight: '2px' }} />
               Must be the same with password
             </p>
-            <button disabled={!validName || !validPassword || !validMatch ? true : false}> Sign Up</button>
+            <button disabled={!validName || !validPassword || !validMatch ? true : false} className={style.signUpButton}> Sign Up</button>
           </form>
           <section className={style.registered}>
             <p>Already registered?</p>

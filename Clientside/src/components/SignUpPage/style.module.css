@@ -15,8 +15,8 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(26, 42, 56, 0.25);
   border-radius: 5px;
-  padding: 25px 15px;
-  width: 300px;
+  padding: 40px 20px;
+  width: 100vw;
   margin: 100px auto;
 }
 .title{
@@ -25,13 +25,19 @@
 .signUpForm{
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
   gap: 5px;
+}
+.signUpLabel{
+  align-self: flex-start;
 }
 .signUpInput{
   background-color: white;
   color: black;
   border-radius: 5px;
   font-size: larger;
+  margin-bottom: 10px;
+  width: 100%;
 }
 .instruction{
   display: block;
@@ -39,6 +45,7 @@
   background-color: black;
   color: white;
   padding: 5px;
+  margin-top: -10px;
   border-radius: 5px;
 }
 .offscreen{
@@ -56,6 +63,9 @@
 .registered{
   margin-top: 10px;
 }
+.signUpButton{
+  margin-bottom: 20px;
+}
 .loginButton{
   background-color: transparent;
   border: none;
@@ -65,4 +75,13 @@
 }
 .loginButton:hover{
   scale: 1.1;
+}
+@media screen and (min-width: 350px){
+  .signUpContainer{
+    max-width: 350px;
+    border-radius: 10px;
+  }
+  .instruction{
+    font-size: small;
+  }
 }
