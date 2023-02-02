@@ -16,6 +16,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const [radioValue, setRadioValue] = useState('user')
+  const [loading, setLoading] = useState('none'); //variable for the invalidinput text
 
   const [user, setUser] = useState('');
   const [validName, setValidName] = useState(false);
@@ -50,6 +51,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading('inline-block')
 
     if(radioValue === 'admin'){
        await fetch('https://movienotepad-serverside.onrender.com/adminUser', {
@@ -63,6 +65,7 @@ const SignUp = () => {
           password,
         }),
       });
+      setLoading('none')
       return setSuccess(true);
     }
     await fetch('https://movienotepad-serverside.onrender.com/user', {
@@ -76,6 +79,7 @@ const SignUp = () => {
           password,
         }),
       });
+      setLoading('none')
       setSuccess(true)
   };
   const toLogin = () => {
@@ -210,7 +214,7 @@ const SignUp = () => {
               <input type='radio' value='user' className={style.radioButtonInput} checked={radioValue === 'user'} onChange={radioFunction}/>
             </section>
             <button disabled={!validName || !validPassword || !validMatch ? true : false} className={style.signUpButton}>
-              {' '}
+            <i className='fa fa-spinner fa-spin' style={{ display: `${loading}`, marginRight: '10px' }} ></i>
               Sign Up
             </button>
           </form>
